@@ -1,18 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace WpfApp3
 {
@@ -64,6 +54,11 @@ namespace WpfApp3
         #endregion
 
         #region Folder Expanded
+        /// <summary>
+        /// When a folder is expanded, find the sub folders/files
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Folder_Expanded(object sender, RoutedEventArgs e)
         {
             #region Initial Checks
@@ -162,6 +157,8 @@ namespace WpfApp3
         }
         #endregion
 
+        #region Helpers
+
         /// <summary>
         /// Find the file or folder name from a full path
         /// </summary>
@@ -192,4 +189,5 @@ namespace WpfApp3
             return path.Substring(lastIndex + 1);
         }
     }
+    #endregion
 }
